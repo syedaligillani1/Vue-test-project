@@ -1,5 +1,57 @@
-# Vue 3 + TypeScript + Vite
+# Law Firm UI – Vue 3 + TypeScript + Tailwind CSS
 
-This template should help get you started developing with Vue 3 and TypeScript in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
+A professional frontend layout for a law firm-style application, built using Vue 3, TypeScript, Tailwind CSS, and Vite.
 
-Learn more about the recommended Project Setup and IDE Support in the [Vue Docs TypeScript Guide](https://vuejs.org/guide/typescript/overview.html#project-setup).
+## 📁 Features
+
+- Sidebar navigation (collapsible)
+- Multi-step form (Add Record)
+- Responsive layout with Tailwind utility classes
+- Fast development experience with Vite
+
+## 🚀 Getting Started
+
+### Prerequisites
+
+- Node.js (v18 or above recommended)
+- npm or yarn
+
+### Install Dependencies
+
+npm install
+
+### Run the Development Server
+
+npm run dev
+
+### Build for Production
+
+npm run build
+
+## 🛠 Tech Stack
+
+- Vue 3
+- TypeScript
+- Tailwind CSS
+- Vite
+- Vue Router
+
+## 📂 Project Structure
+
+src/
+│
+├── components/       # Reusable components like Sidebar, Form Inputs
+├── pages/            # Route-based views like Dashboard, AddRecord
+├── router/           # Vue Router configuration
+├── App.vue           # Root component
+└── main.ts           # App entry point
+
+## 📝 License
+
+This project is open source and free to use.
+
+---
+
+### ✨ Author
+
+Ali Gillani – https://github.com/syedaligillani1
