@@ -1,21 +1,17 @@
 <template>
   <div
     class="h-screen bg-gray-800 text-white flex flex-col transition-all duration-300 overflow-hidden"
-    :class="isExpanded ? 'w-64' : 'w-20'"
-  >
-    <!-- Hamburger Toggle Always at Top -->
+    :class="isExpanded ? 'w-64' : 'w-20'"  >
     <div class="flex justify-center py-4 border-b border-gray-700">
       <button @click="toggleSidebar" class="text-white text-2xl focus:outline-none">
         &#9776;
       </button>
     </div>
 
-    <!-- Logo or Title -->
     <div class="text-center py-4 border-b border-gray-700 text-lg font-bold">
       {{ isExpanded ? 'Vue JS Assignment' : 'VJA' }}
     </div>
 
-    <!-- Navigation Items -->
     <nav class="mt-6 flex flex-col gap-2 px-2">
       <div
         class="flex items-center px-4 py-2 rounded-md cursor-pointer transition-all"
@@ -43,13 +39,20 @@
 </template>
 
 <script setup lang="ts">
-import { ref } from 'vue'
+import { ref, watch } from 'vue'
 import { useRoute, useRouter } from 'vue-router'
 
 const route = useRoute()
 const router = useRouter()
 
 const isExpanded = ref(route.path.includes('expanded'))
+
+watch(
+  () => route.path,
+  (newPath) => {
+    isExpanded.value = newPath.includes('expanded')
+  },
+)
 
 function toggleSidebar() {
   const newPath = isExpanded.value
@@ -64,3 +67,4 @@ function goTo(path: string) {
   router.push(path)
 }
 </script>
+
